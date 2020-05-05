@@ -5,10 +5,12 @@ import java.util.Date;
 
 public class Menu {
 
-    private ArrayList<MenuItem> menuItems;
+    private ArrayList<MenuItem> menuItems = new ArrayList<>();
     private String dateLastUpdated;
 
     //constructors
+    public Menu() {
+    }
     public Menu(ArrayList<MenuItem> menuItems) {
         this.menuItems = menuItems;
     }
@@ -16,6 +18,8 @@ public class Menu {
         this.menuItems = menuItems;
         this.dateLastUpdated = dateLastUpdated;
     }
+
+
 
     //menuItems getter & setter
     public ArrayList<MenuItem> getMenuItems() {
