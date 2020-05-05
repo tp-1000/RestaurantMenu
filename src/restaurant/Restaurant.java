@@ -11,24 +11,24 @@ public static void main(String[] args) {
     MenuItem noodles = new MenuItem("Noodles","delicious buttery pasta","entree", 29.99, true);
     MenuItem macaroni = new MenuItem("Macaroni","delicious buttery pasta","entree", 29.99, true);
 
-    Menu pastaInc = new Menu();
 
-    //add items
-     pastaInc.addItem(pasta);
-    pastaInc.addItem(noodles);
-    pastaInc.addItem(macaroni);
-
+    //add items to list
+    ArrayList<MenuItem> pastaInc = new ArrayList<>();
+    //add list to menu
+    pastaInc.add(pasta);
+    pastaInc.add(noodles);
+    pastaInc.add(macaroni);
+    //define last updated
+    String dateLastUpdated = "Last Week";
+    //create new menu
+    Menu menu = new Menu(pastaInc, dateLastUpdated);
     //print whole menu
-    pastaInc.printMenu();
-    System.out.println();
-
+    menu.printMenu();
     //print individual item
     System.out.println(pasta);
-    System.out.println();
-
     //delete, noodles, then reprint menu
-    pastaInc.removeItem(noodles);
-    pastaInc.printMenu();
+    menu.removeItem(noodles);
+    menu.printMenu();
 
 }
 
